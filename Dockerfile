@@ -1,7 +1,9 @@
-FROM centos:centos6
+FROM centos:centos7
+MAINTAINER moremagic <itoumagic@gmail.com>
 
 # Add Oracle requirements
-RUN yum install -y libaio bc flex openssh-server
+RUN yum install -y libaio bc flex net-tools redhat-lsb openssh-server
+RUN mkdir /var/lock/subsys
 
 # Install Oracle XE
 # - Check RPM SHA1
