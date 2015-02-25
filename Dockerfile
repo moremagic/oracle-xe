@@ -44,6 +44,7 @@ ORACLE_DBENABLE=y \n\
 # docker exec -ti oracle_app passwd oracle
 RUN ssh-keygen -h -t rsa -f /etc/ssh/ssh_host_rsa_key \
     && ssh-keygen -h -t dsa -f /etc/ssh/ssh_host_dsa_key \
+    && echo "root" | passwd --stdin root \
     && echo "oracle" | passwd --stdin oracle \
     && printf '\
 export ORACLE_HOME=/u01/app/oracle/product/11.2.0/xe \n\
