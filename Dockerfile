@@ -6,7 +6,7 @@ RUN yum upgrade -y ca-certificates
 
 # Add Oracle requirements
 RUN yum install -y libaio bc flex net-tools redhat-lsb openssh-server
-RUN mkdir -p /var/lock/subsys
+#RUN mkdir -p /var/lock/subsys
 
 # Install Oracle XE
 # - Check RPM SHA1
